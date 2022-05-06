@@ -4,23 +4,19 @@ import logo from "../assets/logo-blue.png";
 export default function Header() {
   const [toggleDisplay, setToggleDisplay] = useState("none");
 
-  const show = useEffect(
-    _ => {
-      const navBar = document.querySelector(".navigation__menu");
-      navBar.style.display = toggleDisplay;
+  useEffect(_ => {
+    const navBar = document.querySelector(".navigation__menu");
+    navBar.style.display = toggleDisplay;
 
-      const show = _ => {
-        if (toggleDisplay === "none") {
-          setToggleDisplay("block");
-        } else {
-          setToggleDisplay("none");
-        }
-      };
+  }, [toggleDisplay]);
 
-      return show;
-    },
-    [toggleDisplay]
-  );
+  const show = _ => {
+    if (toggleDisplay === "none") {
+      setToggleDisplay("block");
+    } else {
+      setToggleDisplay("none");
+    }
+  };
 
   return (
     <>
