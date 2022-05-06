@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import "./styles/App.scss";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/profile/:lawyer" element={<Profile />} />
       </Routes>
     </Router>
   );

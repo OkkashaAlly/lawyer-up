@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo-blue.png";
 
 export default function Header() {
@@ -27,9 +28,9 @@ export default function Header() {
       <header className="section-header">
         <div className="header">
           {/* <!-- Logo --> */}
-          <picture className="header__logo-box">
+          <Link to="/" className="header__logo-box">
             <img src={logo} alt="Logo" className="header__logo" />
-          </picture>
+          </Link>
           {/* <!-- User Name --> */}
           <div className="header__user-box">
             <span className="header__user-name">Lawyer Up</span>

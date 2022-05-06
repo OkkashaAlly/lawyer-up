@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import photo1 from "../assets/photo1.png";
-import ratingImg from '../assets/ratings.png'
+import ratingImg from "../assets/ratings.png";
 
 export default function LawyerProfile() {
   return (
@@ -29,9 +30,9 @@ export default function LawyerProfile() {
             <ul>
               <li>4 Years of Experience</li>
             </ul>
-            <a href="./html/profile.html" className="btn u-margin-top-small">
+            <Link to="/profile/lawyerName" className="btn u-margin-top-small">
               View Profile
-            </a>
+            </Link>
           </div>
         </div>
       </div>
