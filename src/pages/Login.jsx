@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo-white.png";
 
 export default function Login() {
@@ -10,12 +11,13 @@ export default function Login() {
             <div className="login-form">
               <div className="left">
                 <div className="text-box">
-                  <picture className="logo">
+                  <Link to={"/"} className="logo">
                     <img src={logo} alt="logo" />
-                  </picture>
+                  </Link>
                   <h1 className="h-1">Lawyer Up</h1>
                   <p className="paragraph">
-                    Find lawyers at affordable price, on any situation. Instantly! 
+                    Find lawyers at affordable price, on any situation.
+                    Instantly!
                   </p>
                 </div>
               </div>
@@ -57,10 +59,10 @@ export default function Login() {
                   <div className="btns-box u-margin-top-big">
                     <ul>
                       <li>
-                        <a href="registration.html">Create Account</a>
+                        <Link to="/registration">Create Account</Link>
                       </li>
                       <li>
-                        <a href="/">Forgot Password</a>
+                        <Link to="/">Forgot Password</Link>
                       </li>
                     </ul>
                   </div>
