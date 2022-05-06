@@ -1,0 +1,82 @@
+// ##############
+// HEADER SECTION
+// ##############
+.section-header{
+	background-color: $color-secondary;
+
+	// More edits are imported from(layout/_header);
+}
+
+// ##############
+// SEARCH SECTION
+// ##############
+.section-search {
+	height: 40rem;
+	background-image:
+	 linear-gradient(to right, rgba($color-primary, .5), rgba($color-primary, .7)),
+	 url('../../assets/watch-backup.jpg');
+	background-position: center;
+	background-size: cover;
+	color: $color-white;
+
+	@include respond (phone) {
+		height: 55rem;
+	};
+
+
+	& .search {
+		padding-top: 2rem;
+
+		// Background Blur using backdrop-filter
+		& .blur {
+			background: rgba(255, 255, 255, 0.2);
+
+			@supports (-webkit-backdrop-filter: none) or (backdrop-filter:none) {
+				background: rgba(255, 255, 255, 0.2); // Make sure this color has an opacity of less than 1
+				backdrop-filter: blur(8px); // This be the blur
+			}
+		}
+
+		&-wraper {
+			border-radius: 1rem;
+			width: 70%;
+			margin: 0 auto;
+			padding: 5rem;
+			display: flex;
+			justify-content: space-around;
+
+			@include respond (phone) {
+				// width: 90%;
+				flex-direction: column;
+
+				.left {
+					margin-bottom: 2rem;
+				}
+			}
+
+			.search__btn img {
+				height: 5rem;
+			}
+		}
+	}
+
+
+}
+
+// ##############
+// PROFILE SECTION
+// ##############
+.section-profile {
+	background-color: $color-secondary;
+	padding-bottom: 4rem;
+
+	.profile-wraper {
+		padding: 3rem 0 13.8rem;
+		
+		> *:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	// More edits on components(_profile-lawyer)
+}

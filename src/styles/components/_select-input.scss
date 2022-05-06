@@ -1,0 +1,43 @@
+/* Custom Select */
+.select {
+	position: relative;
+	display: flex;
+	width: 30rem;
+	height: 5rem;
+	line-height: 3;
+	background: $color-secondary;
+	overflow: hidden;
+	border-radius: .25rem;
+
+	@include respond (phone) {
+		width: 100%;
+	};
+
+	.input {
+		font-size: 2rem;
+	}
+}
+select {
+	flex: 1;
+	padding: .1rem 1rem;
+	color: $color-primary;
+	cursor: pointer;
+}
+/* Arrow */
+.select::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1rem 2rem;
+	background: $color-secondary-dark;
+	cursor: pointer;
+	pointer-events: none;
+	-webkit-transition: .25s all ease;
+	-o-transition: .25s all ease;
+	transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+	color: $color-primary;
+}

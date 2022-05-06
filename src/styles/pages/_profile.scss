@@ -1,0 +1,114 @@
+// ##############
+// HEADER SECTION
+// ##############
+.section-header{
+	background-color: $color-secondary;
+
+	// More edits are imported from(layout/_header);
+}
+
+// ##############
+// Lawyer SECTION
+// ##############
+.section-lawyer {
+	background-color: $color-primary;
+	color: $color-secondary;
+
+	.lawyer__lawyer {
+		width: 80%;
+		margin: 0 auto;
+		padding: 3rem 0 3rem 2rem;
+
+		.left, .right {
+			display: flex;
+			align-items: center;
+		}
+
+		.right {
+			padding-right: 5rem;
+		}
+
+		&-info {
+			font-size: 1.4rem;
+			display: flex;
+
+			> *:not(:last-child) {
+				margin-right: auto;
+			}
+			// Left Side
+
+			&--image img {
+				width: 11rem;
+				margin-right: 2rem;
+			}
+		}
+	}
+}
+
+// ##############
+// ABOUT SECTION
+// ##############
+.section-about{
+	background-color: $color-secondary;
+	padding: 4rem 0 6rem;
+
+	.about {
+		width: 80%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+
+		@include respond (phone) {
+			display: block;
+		} ;
+
+		.left {
+			// display: flex;
+			// align-items: center;
+			flex-basis: 72%;
+
+
+			> *:not(:last-child) {
+				margin-bottom: .5rem
+			}
+		}
+
+		.right {
+			flex-basis: 25%;
+			text-align: center;
+			// padding-top: 1rem;
+		}
+
+		.about__lawyer {
+
+			padding: 3rem 2.5rem;
+			background-color: $color-tertiary;
+			border: 1px solid $color-white;
+
+			&-info {
+				font-size: 1.4rem;
+				// display: flex;
+
+				.skills {
+					list-style: circle;
+					display: flex;
+					flex-wrap: wrap;
+
+					&__item {
+						flex: 0 0 50%;
+					}
+				}
+
+				// personal-details
+				.personal-details li {
+					display: flex;
+
+					span {
+						flex: 0 0 50%;
+					}
+				}
+			}
+		}
+	}
+
+}

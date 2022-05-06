@@ -1,0 +1,78 @@
+.section-login {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-secondary;
+
+	.login-form {
+		display: flex;
+		height: 50rem;
+		color: $color-primary;
+		background-color: #fff;
+		// width: 50%;
+		width: 80rem;
+		border-radius: $radius-5px;
+
+		@include respond (phone) {
+			width: 50rem;
+		};
+
+		.left,
+		.right {
+			padding: 2rem;
+			flex-basis: 50%;
+		}
+
+		.left {
+			color: $color-white;
+			background-image:
+			 linear-gradient(to right bottom,
+			     rgba($color-primary-light, .5),
+					 rgba($color-primary-dark, .5)),
+			 url('../../assets/login.jpg');
+			background-size: cover;
+			background-position: center;
+			border-top-left-radius: $radius-5px;
+			border-bottom-left-radius: $radius-5px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.logo img { width: 12rem }
+
+			@include respond (phone) {
+				display: none;
+				flex-basis: 0;
+			}
+		}
+
+		.right {
+			background-color: $color-white;
+			border-top-right-radius: $radius-5px;
+			border-bottom-right-radius: $radius-5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include respond (phone) {
+				flex-basis: 100%;
+			}
+
+			.form-wraper {
+				width: 80%;
+			}
+
+			// More Edits, on components(_form.scss)
+
+			.btns-box ul {
+				display: flex;
+				justify-content: center;
+				justify-content: space-around;
+
+				li { cursor: pointer; }
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+.profile__lawyer {
+	width: 60%;
+	margin: 0 auto;
+	padding: 3rem 0 3rem 2rem;
+	background-color: $color-tertiary;
+	border-top: 1px solid $color-white;
+	transition: transform .1s;
+
+	@include respond (phone) {
+		width: 90%;
+	};
+
+	&:hover {
+		transform: scale(1.009);
+	}
+
+	.left {
+		display: flex;
+		align-items: center;
+	}
+
+	.right {
+		padding-top: 1rem;
+	}
+
+	&-info {
+		font-size: 1.4rem;
+		display: flex;
+
+		@include respond (phone) {
+			// flex-direction: column;
+		};
+
+		> *:not(:last-child) {
+			margin-right: 20rem;
+
+			@include respond (tab-por) {
+				margin-right: 7.5rem;
+			};
+
+			@include respond (phone) {
+				margin-right: 2.5rem;
+			};
+		}
+		// Left Side
+
+		&--image img {
+			width: 11rem;
+		}
+
+		&-wraper {
+			margin-left: 2rem;
+
+			// lawyer name
+			h3 {
+				font-size: 1.8rem;
+			}
+		}
+
+
+		// Right Side
+		.right {
+
+			// @include respond (phone) {
+			// 	display: flex;
+			// 	justify-content: center;
+			// };
+		}
+		&--ratings img {
+			height: 2rem;
+		}
+	}
+}

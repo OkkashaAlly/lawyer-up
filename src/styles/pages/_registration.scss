@@ -1,0 +1,99 @@
+.section-registration {
+	background-color: $color-secondary;
+	height: 100vh;
+	max-height: 120vh;
+
+	.registration {
+		display: flex;
+		height: 100%;
+
+		@include respond (phone) {
+			flex-direction: column;
+		}
+
+		.left {
+			flex-basis: 40%;
+			background-image:
+				linear-gradient(
+				    to bottom,
+				    rgba($color-primary-light, .6) 40%,
+						rgba($color-primary, .9)
+				),
+				url('../../assets/registration.jpg');
+			background-size: cover;
+			background-position: bottom;
+			color: $color-white;
+			text-align: right;
+			padding: 0 2.5rem 4rem 0;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+
+			@include respond (tab-por) {
+				padding-bottom: 10rem;
+			}
+			
+			@include respond (phone) {
+				justify-content: center;
+				align-items: center;
+				flex-basis: 15%;
+				text-align: center;
+				padding: 0;
+				background-position: top;
+			}
+
+
+		}
+
+		.right {
+			flex-basis: 60%;
+			display: flex;
+			align-items: center;
+			background-color: $color-secondary;
+
+			@include respond (phone) {
+				flex-basis: 85%;
+			};
+
+
+
+			.wraper {
+				width: 80%;
+				margin: 0 auto;
+				.logo-box {
+					display: flex;
+					align-items: center;
+
+					@include respond (phone) {
+						justify-content: center;
+					};
+
+					.logo {
+						margin-right: 1rem;
+						img { width: 6rem }
+					}
+				}
+
+				.form-wraper {
+
+					.left-side,
+					.right-side {
+						width: 48%;
+						@include respond (tab-por) {
+							width: 100%;
+						};
+					}
+
+					.flex {
+						display: flex;
+						justify-content: space-between;
+						@include respond (tab-por) {
+							display: block;
+						};
+					}
+				}
+
+			}
+		}
+	}
+}

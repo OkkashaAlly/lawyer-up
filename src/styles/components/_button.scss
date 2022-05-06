@@ -1,0 +1,47 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		text-decoration: none;
+		color: $color-secondary;
+		background-color: $color-primary;
+		font-size: 1.6rem;
+		font-weight: 600;
+		padding: .5rem 1rem;
+		text-transform: uppercase;
+		display: inline-block;
+		border-radius: .2rem;
+		cursor: pointer;
+
+		// change button defaults
+		border: none;
+	}
+
+	&:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+    &:hover::after {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+	&:focus {
+		outline: none;
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  }
+
+	// White Button
+	&--white {
+		color: $color-primary !important;
+		background-color: $color-secondary !important;
+	}
+
+	&--pri-big {
+		width: 55%;
+		padding: 2rem 0;
+	}
+}
