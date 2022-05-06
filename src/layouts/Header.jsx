@@ -54,29 +54,29 @@ export default function Header() {
           <nav className="navigation__menu">
             <ul className="navigation__list">
               <li className="navigation__item">
-                <a href="/" className="navigation__link">
+                <Link to="/" className="navigation__link">
                   <span>01</span>Kuhusu Sheria App
-                </a>
+                </Link>
               </li>
               <li className="navigation__item">
-                <a href="/" className="navigation__link">
+                <Link to="/" className="navigation__link">
                   <span>02</span>Miamala
-                </a>
+                </Link>
               </li>
               <li className="navigation__item">
-                <a href="/" className="navigation__link">
+                <Link to="/" className="navigation__link">
                   <span>03</span>Tafuta Mwanasheria
-                </a>
+                </Link>
               </li>
               <li className="navigation__item">
-                <a href="html/login.html" className="navigation__link">
-                  <span>04</span>Jisajili/Akaunt Yako
-                </a>
+                <Link to="/login" className="navigation__link">
+                  <span>04</span>Akaunt Yako
+                </Link>
               </li>
               <li className="navigation__item">
-                <a href="/" className="navigation__link">
-                  <span>05</span>Wasiliana Nasi
-                </a>
+                <Link to="/registration" className="navigation__link">
+                  <span>05</span>Jisajili
+                </Link>
               </li>
             </ul>
           </nav>
